@@ -7,8 +7,8 @@ describe 'kibana_lwrp::default' do
     let(:runner) { ChefSpec::ServerRunner.new(::UBUNTU_OPTS) }
     let(:node) { runner.node }
     let(:chef_run) do
-      # runner.node.set['logstash'] ...
-      runner.node.set['kibana']['legacy_mode'] = 'false'
+      # runner.node.default['logstash'] ...
+      runner.node.default['kibana']['legacy_mode'] = 'false'
       runner.node.automatic['memory']['total'] = '1024kB'
       runner.converge(described_recipe)
     end
