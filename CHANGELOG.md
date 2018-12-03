@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of kibana.
 
+## 3.0.3
+* Change node.set to node.default for chef 14 compatibility
+
 ## 3.0.2
 * Fix a notification that was to runit_service[nginx] instead of service[nginx].
 
